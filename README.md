@@ -93,55 +93,6 @@ multipass info primary
 
 You should see that the "primary" instance has 8 CPUs, 8 GB of memory, and 3.5 TB of disk space.
 
-The simplest way to automatically start the "primary" VM when your Mac mini boots up is to create a launch agent plist file. Follow these steps:
-
-1. Open your favorite text editor and create a new file called `com.mymac.multipass.primary.plist`. Replace "mymac" with your desired identifier, but ensure it remains unique.
-
-2. Copy and paste the following XML content into the file:
-
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-  <key>Label</key>
-  <string>com.mymac.multipass.primary</string>
-  <key>ProgramArguments</key>
-  <array>
-    <string>/usr/local/bin/multipass</string>
-    <string>start</string>
-    <string>primary</string>
-  </array>
-  <key>RunAtLoad</key>
-  <true/>
-</dict>
-</plist>
-```
-
-3. Save the file.
-
-4. Copy the saved `com.mymac.multipass.primary.plist` file to the `~/Library/LaunchAgents/` directory. You can use the following command in the terminal:
-
-```
-cp /path/to/com.mymac.multipass.primary.plist ~/Library/LaunchAgents/
-```
-
-Replace `/path/to/` with the actual path to the `com.mymac.multipass.primary.plist` file.
-
-5. Load the launch agent plist:
-
-```
-launchctl load ~/Library/LaunchAgents/com.mymac.multipass.primary.plist
-```
-
-Now, every time your Mac mini boots up, the "primary" VM will automatically start.
-
-To unload the launch agent and disable the automatic start of the "primary" VM, you can run:
-
-```
-launchctl unload ~/Library/LaunchAgents/com.mymac.multipass.primary.plist
-```
-
 
 ## Installing Umbrel using a One-liner Script
 
