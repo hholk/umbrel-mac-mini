@@ -1,4 +1,4 @@
-# Multipass on macOS: Installation, Changing Image Storage, and Launching Ubuntu with Custom Configuration
+# Umbrel with Multipass on macOS: Installation, Changing Image Storage, and Launching Ubuntu with Custom Configuration for Umbrel
 
 This tutorial will guide you through the process of installing Multipass on macOS, changing the default image storage location to an external drive, and launching an Ubuntu instance with custom CPU, memory, and disk configurations.
 
