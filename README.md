@@ -79,10 +79,10 @@ The Multipass image storage location is now changed to the new location on your 
 
 ## Launching Ubuntu Instance with Custom Configuration
 
-1. Launch a new Ubuntu instance named "primary" with 8 CPU cores, 3.5 TB of disk space, and 8 GB of RAM:
+1. Launch a new Ubuntu instance named "primary" with 4 CPU cores, 2 TB of disk space, and 4 GB of RAM:
 
 ```
-multipass launch --name primary --cpus 8 --disk 3500G --mem 8G
+multipass launch --name primary --cpus 4 --disk 2000G --mem 2G
 ```
 
 2. Verify the configuration by running the following command:
