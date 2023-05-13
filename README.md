@@ -84,6 +84,12 @@ The Multipass image storage location is now changed to the new location on your 
 ```
 multipass launch --name primary --cpus 4 --disk 2000G --mem 4G
 ```
+If there is an error, because a primary-instance was already initiated follow those two commands: 
+```
+multipass delete primary
+multipass purge
+```
+Then retry the launch command. 
 
 2. Verify the configuration by running the following command:
 
@@ -91,7 +97,7 @@ multipass launch --name primary --cpus 4 --disk 2000G --mem 4G
 multipass info primary
 ```
 
-You should see that the "primary" instance has 8 CPUs, 8 GB of memory, and 3.5 TB of disk space.
+You should see that the "primary" instance has 4 CPUs, 4 GB of memory, and 2 TB of disk space.
 
 
 ## Installing Umbrel using a One-liner Script
