@@ -91,6 +91,11 @@ multipass purge
 ```
 Then retry the launch command. 
 
+If multipass ends up not using the hard drive but the makes a new folder in the /Volumes-Folder. Generate a symlink to the multipass-images folder, change the name of the hard drive before
+```
+sudo ln -s /Volumes/"original hard drive with changed name"/multipass-images /Volumes/"new folder"/multipass-images
+```
+
 2. Verify the configuration by running the following command:
 
 ```
